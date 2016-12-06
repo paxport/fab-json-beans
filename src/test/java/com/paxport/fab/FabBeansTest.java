@@ -44,7 +44,7 @@ public class FabBeansTest {
 
         InputStream xml = FabBeansTest.class.getResourceAsStream("/basket1.xml");
 
-        String json = beans.xmlToJson(xml,Basket.class,true);
+        String json = beans.xmlToJson(xml,Basket.class);
 
         System.out.println (json);
 

@@ -121,14 +121,18 @@ public class FabBeans {
         }
     }
 
-    public <E> void xmlToJson(InputStream source, OutputStream out, Class<E> type, boolean prettyPrint){
+    public <E> void xmlToJson(InputStream source, OutputStream out, Class<E> type){
         E bean = fromXML(source,type);
         toJSON(bean,out);
     }
 
-    public <E> String xmlToJson(InputStream source, Class<E> type, boolean prettyPrint){
+    public <E> String xmlToJson(InputStream source, Class<E> type){
         E bean = fromXML(source,type);
         return toJSON(bean);
+    }
+
+    public <E> String xmlToJson(String xml, Class<E> type){
+        return xmlToJson(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8)),type);
     }
 
     public <E> void jsonToXml(InputStream source, OutputStream out, Class<E> type, boolean prettyPrint){
@@ -139,6 +143,10 @@ public class FabBeans {
     public <E> String jsonToXml(InputStream source, Class<E> type, boolean prettyPrint){
         E bean = fromJSON(source,type);
         return toXML(bean,prettyPrint);
+    }
+
+    public <E> String jsonToXml(String json, Class<E> type, boolean prettyPrint){
+        return jsonToXml(new ByteArrayInputStream(json.getBytes(StandardCharsets.UTF_8)),type,prettyPrint);
     }
 
 }
