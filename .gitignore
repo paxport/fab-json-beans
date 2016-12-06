@@ -1,12 +1,51 @@
+# Compiled source #
+###################
+*.com
 *.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Maven/Eclipse #
+#################
+build
+bin
+.project
+.classpath
+.settings
+.gradle
+**/target
+release.properties
+pom.xml.releaseBackup
+
+# IDEA #
+#################
+out
+*.iml
+*.ipr
+*.iws
+**/*.iml
+.idea
+
+
+# Misc #
+########
+.DS_Store
+**/.DS_Store
+
+.vagrant

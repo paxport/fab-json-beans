@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by adam (multicom) -->
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Adam Chesney (Multicom Products Ltd) -->
+<xs:schema xmlns="http://www.xmltravel.com/fab/2002/09" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xmltravel.com/fab/2002/09" version="1.18">
+    <xs:simpleType name="TransferType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="UNKNOWN">
+                <xs:annotation>
+                    <xs:documentation>Unknown transfer type</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="PUBLIC_SHUTTLE_TRANSFER">
+                <xs:annotation>
+                    <xs:documentation>Public (shared) transfer type</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="PRIVATE_TRANSFER">
+                <xs:annotation>
+                    <xs:documentation>Private transfer type</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="EXECUTIVE_PRIVATE_TRANSFER">
+                <xs:annotation>
+                    <xs:documentation>Executive private transfer type</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+	<xs:simpleType name="CabinType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="suite">
+				<xs:annotation>
+					<xs:documentation>Suite cabin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="minisuite">
+				<xs:annotation>
+					<xs:documentation>Mini suite cabin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="balcony">
+				<xs:annotation>
+					<xs:documentation>Cabin with balcony</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="outside">
+				<xs:annotation>
+					<xs:documentation>Cabin on an external side of the ship</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="inside">
+				<xs:annotation>
+					<xs:documentation>Cabin in the internal section of the ship</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CruiseDiningType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="seating"/>
+			<xs:enumeration value="smoking"/>
+			<xs:enumeration value="tablesize"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CruiseShipPosition">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="after"/>
+			<xs:enumeration value="forward"/>
+			<xs:enumeration value="middle"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CruiseShipSide">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="port"/>
+			<xs:enumeration value="star"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CruiseLocationCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="in"/>
+			<xs:enumeration value="out"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SupplierCode">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Identifies a FAB Supplier by a two or three letter code. This could be package tour operator or airline reservation system etc.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z0-9]{2,3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABCarrierCode">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Identifies a Flight carrier by a two or three letter code. Only FAB special codes should contain an underscore e.g. M_X </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z0-9_]{2,3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABDate">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Year month and day information</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9][0-9][0-9][0-9](0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABTime">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Time of day information HHmm (24 hour clock) e.g. 1450</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(0[0-9]|1[0-9]|2[0-3])[0-5][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABDateTime">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Date plus time of day information YYYYMMDD HHmm (24 hour clock) e.g. 20030132 1450</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9][0-9][0-9][0-9](0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]) (0[0-9]|1[0-9]|2[0-3])[0-5][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AccommodationClassCode">
+		<xs:annotation>
+			<xs:documentation>Code indicating the quality of an Accommodation, e.g. 3*, 5* </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="X*"/>
+			<xs:enumeration value="FO"/>
+			<xs:enumeration value="FD"/>
+			<xs:enumeration value="0*"/>
+			<xs:enumeration value="1*"/>
+			<xs:enumeration value="2*"/>
+			<xs:enumeration value="3*"/>
+			<xs:enumeration value="4*"/>
+			<xs:enumeration value="5*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MealPlanCode">
+		<xs:annotation>
+			<xs:documentation>The code for a meal plan e.g. HB (Half Board)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NA">
+				<xs:annotation>
+					<xs:documentation>Not Applicable or Unknown</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AB">
+				<xs:annotation>
+					<xs:documentation>As Brochure</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RO">
+				<xs:annotation>
+					<xs:documentation>Room Only (no meals)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SC">
+				<xs:annotation>
+					<xs:documentation>Self Catering facilities</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BB">
+				<xs:annotation>
+					<xs:documentation>Bed And Breakfast provided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HB">
+				<xs:annotation>
+					<xs:documentation>Half Board</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FB">
+				<xs:annotation>
+					<xs:documentation>Full Board</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FP">
+				<xs:annotation>
+					<xs:documentation>Full Board Plus</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AI">
+				<xs:annotation>
+					<xs:documentation>All Inclusive</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CC">
+				<xs:annotation>
+					<xs:documentation>Catered Chalet</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CA">
+				<xs:annotation>
+					<xs:documentation>Assisted Chalet</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CM">
+				<xs:annotation>
+					<xs:documentation>Managed Chalet</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CL">
+				<xs:annotation>
+					<xs:documentation>Catered Lodge</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NonEmptyString">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\S.*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TravelPointCode">
+		<xs:annotation>
+			<xs:documentation>IATA Location Code used for airports and cities etc. e.g. LGW, AGP</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z]{3}|[a-zA-Z0-9]{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PortCode">
+		<xs:annotation>
+			<xs:documentation>Alpha numeric travel port code added for Cruise etc. e.g. LG1, AG2, can be 3 or 5 characters</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z0-9]{3}|[a-zA-Z0-9]{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ISO3166">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">2 character Country Code as defined in ISO3166.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Numeric1to9">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Numeric values, from 1 to 9 inclusive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="9"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Numeric1to99">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Numeric values, from 1 to 99 inclusive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RequiredPaxCount">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">The number of each passenger type allowed e.g. 1-49 adults</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="OptionalPaxCount">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OptionalPaxCount">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">The number of each passenger type allowed e.g. 0-49 children and 0-49 infants</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="49"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Numeric0to99">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Numeric values, from 0 to 99 inclusive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="99"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Percentage">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Numeric values, from 0 to 100 inclusive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Numeric0to999">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Numeric values, from 0 to 999 inclusive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Numeric1to1000">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Numeric values, from 1 to 999 inclusive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Numeric0to1000">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for Numeric values, from 0 to 1000 inclusive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PositiveFloat">
+		<xs:restriction base="xs:float">
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="YoungPersonAge">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">The current age of a younger traveller. Used for producing a quick cost.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="2"/>
+			<xs:maxInclusive value="21"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DayOfWeekType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">The Day of Week of the starting date for the availability requested. Enumerated values of StartDOW are the seven days of the week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday - using three-letter abbreviations Mon, Tue, Wed, Thu, Fri, Sat, or Sun
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="Mon"/>
+			<xs:enumeration value="Tue"/>
+			<xs:enumeration value="Wed"/>
+			<xs:enumeration value="Thu"/>
+			<xs:enumeration value="Fri"/>
+			<xs:enumeration value="Sat"/>
+			<xs:enumeration value="Sun"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TravelSegmentType">
+		<xs:annotation>
+			<xs:documentation>Indicates whether a TravelSegment is "outbound", "transfer" or "homebound"</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="outbound"/>
+			<xs:enumeration value="transfer"/>
+			<xs:enumeration value="homebound"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransportType">
+		<xs:annotation>
+			<xs:documentation>Indicates mode of transport (e.g. "air", "land" or "sea"). dummy is for internal use only.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="air"/>
+			<xs:enumeration value="land"/>
+			<xs:enumeration value="sea"/>
+			<xs:enumeration value="dummy"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABCostingStage">
+		<xs:annotation>
+			<xs:documentation>Indicates the stage in the booking process that generated the holiday cost</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="estimate">
+				<xs:annotation>
+					<xs:documentation>An estimated cost based on data cached within the FAB system. You should look at the percentage accuracy to judge how accurate this estimate is likely to be.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="quick">
+				<xs:annotation>
+					<xs:documentation>A live cost that is generated BEFORE entering full passenger details and BEFORE the addition of any holiday "extras"</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="confirmed">
+				<xs:annotation>
+					<xs:documentation>A live cost that has been confirmed as the actual cost of the holiday itinerary as it is currently.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="booked">
+				<xs:annotation>
+					<xs:documentation>This itinerary has been booked</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABAvailabilityStatus">
+		<xs:annotation>
+			<xs:documentation>Indicates whether or not a particular itinerary is available, unavailable or of unknown status</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="unknown">
+				<xs:annotation>
+					<xs:documentation>Itinerary availability is unknown until we have confirmed it in real-time with each of the itineraries suppliers </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="available"/>
+			<xs:enumeration value="unavailable"/>
+			<xs:enumeration value="onrequest"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABPaymentMode">
+		<xs:annotation>
+			<xs:documentation>Mode of Payment</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="syndicator_deferred">
+				<xs:annotation>
+					<xs:documentation>This indicates that the FAB consumer has been authorised to be responsible for payment gathering from the end user and FAB should not require any further details in order to book the holiday.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="syndicator_deferred_virtual">
+				<xs:annotation>
+					<xs:documentation>This is the same as syndicator_deferred, but the payment will be attempted with using a virtual card from a card system (corporate pay) before the lodged cards.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="card_payment">
+				<xs:annotation>
+					<xs:documentation>Indicates a Credit or Debit Card payment. If Syndicator Lodged cards are available then they will be used for payment for individual components instead of the supplied card.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="card_payment_override_lodged">
+				<xs:annotation>
+					<xs:documentation>Indicates a Credit or Debit Card payment. The supplied card will be used, where possible, in preference to Syndicator Lodged Cards to pay for individual components</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MMYYDate">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Month and Year info for a card issue date or expiry date</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(0[1-9]|1[0-2])[0-9][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABStatus">
+		<xs:annotation>
+			<xs:documentation>
+			Indicates the current status of entities in a partially booked itinerary. Components include 
+			TravelSegments, AccommodationSegments, Transfers, OptionalExtras, Customers, etc. This field 
+			generally concerns post booking operations, and, when not specified the state of the components 
+			in the itinerary are as determined by the FABBookingStage.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="booked">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the entity is booked. Default null semantics.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="adding">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the associated component is being added and still requires booking.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="partial_addition">
+				<xs:annotation>
+					<xs:documentation>
+					An aggregate state denoting the associated component is added but another  
+					component still requires the addition.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pending_addition">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the associated component has been added but is pending the result.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="amending">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the associated entity is booked but undergoing a process of amendment.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="partial_amendment">
+				<xs:annotation>
+					<xs:documentation>
+					An aggregate state denoting the associated component is has been amended but another  
+					component still requires amendment.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pending_amendment">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the associated entity has been amended but is pending the result.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cancelling">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the associated entity is booked but undergoing a process of cancellation.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cancelled">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the associated component is cancelled.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="partial_cancellation">
+				<xs:annotation>
+					<xs:documentation>
+					An aggregate state denoting the associated component is has been cancelled but another  
+					component still requires cancellation.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pending_cancellation">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes the associated entity has been cancelled but is pending the result.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABBookingStage">
+		<xs:annotation>
+			<xs:documentation>Indicates a distinct stage in the booking process.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="quick_costing">
+				<xs:annotation>
+					<xs:documentation>A quick cost has been generated for this Itinerary but we have not yet reached the point where we can enter passenegr details.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="passenger_details">
+				<xs:annotation>
+					<xs:documentation>Enter passenger details</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="confirmed_costing">
+				<xs:annotation>
+					<xs:documentation>The total cost of this Itinerary has been confirmed. The Itinerary can now be booked.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="booked">
+				<xs:annotation>
+					<xs:documentation>This Itinerary has been booked</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cost_amendment">
+				<xs:annotation>
+					<xs:documentation>The cost and applicability of amending this his booked Itinerary is being ascertained. The amendment can now be confirmed.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cost_cancellation">
+				<xs:annotation>
+					<xs:documentation>The cost and applicability of cancelling this his booked Itinerary is being ascertained. The cancellation can now be confirmed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cancelled">
+				<xs:annotation>
+					<xs:documentation>This booked Itinerary has been completely cancelled.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<!-- Easier if this just takes it to 'booked'.
+			<xs:enumeration value="confirm_amendment">
+				<xs:annotation>
+					<xs:documentation>Confirm the previously costed amendment.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			-->
+			<!-- Easier if this just takes it to cancelled.
+			<xs:enumeration value="confirm_cancellation">
+				<xs:annotation>
+					<xs:documentation>Confirm the previously costed cancellation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			-->
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABRequestTargetType">
+		<xs:annotation>
+			<xs:documentation>Indicates whether a FAB request is a Production request or a Test request</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="test">
+				<xs:annotation>
+					<xs:documentation>Indicates a test message</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="staging">
+				<xs:annotation>
+					<xs:documentation>Indicates a production message that will NOT result in a real life booking</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="production">
+				<xs:annotation>
+					<xs:documentation>Indicates a production message</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABSortCode">
+		<xs:annotation>
+			<xs:documentation>Indicates how a list of holidays should be sorted</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none">
+				<xs:annotation>
+					<xs:documentation>Do not sort at all (useful for speeding searches)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cost">
+				<xs:annotation>
+					<xs:documentation>Sort on cost of holiday</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="costOnly">
+				<xs:annotation>
+					<xs:documentation>Sort only on cost of holiday</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="supplier">
+				<xs:annotation>
+					<xs:documentation>Sort on supplier of holiday</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="accommodationName">
+				<xs:annotation>
+					<xs:documentation>Sort by accommodation name</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="country">
+				<xs:annotation>
+					<xs:documentation>Sort by country</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="resortName">
+				<xs:annotation>
+					<xs:documentation>Sort on resort name</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="resortId">
+				<xs:annotation>
+					<xs:documentation>Sort by resort id</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="duration">
+				<xs:annotation>
+					<xs:documentation>Sort by holiday duration</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="departureDate">
+				<xs:annotation>
+					<xs:documentation>Sort by departure date and time</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="originAirport">
+				<xs:annotation>
+					<xs:documentation>Sort by departure airport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="destinationAirport">
+				<xs:annotation>
+					<xs:documentation>Sort by arrival airport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="boardCode">
+				<xs:annotation>
+					<xs:documentation>Sort by board code</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="classCode">
+				<xs:annotation>
+					<xs:documentation>Sort by accommodation class code</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ranking">
+				<xs:annotation>
+					<xs:documentation>Sort by syndicator ranking. Allows syndicator to returned preffered itinerary items first</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="midDepDateDistanceThenCost">
+				<xs:annotation>
+					<xs:documentation>Sort by cost and then sort by distance of depDate from the middle of the specified depDate range leving the results in depDate distance order with cheapest alternatives before more expensive</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CalendarType">
+		<xs:annotation>
+			<xs:documentation>Define type of expected result</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="cheapest">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CalendarFilter">
+		<xs:annotation>
+			<xs:documentation>Define type of applied filter on the results</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DepartureDate"/>
+			<xs:enumeration value="Supplier"/>
+			<xs:enumeration value="OriginAirport"/>
+			<xs:enumeration value="DestinationAirport"/>
+			<xs:enumeration value="Duration"/>
+			<xs:enumeration value="MarketingCarrier"/>
+			<xs:enumeration value="FareType"/>			
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABTitle">
+		<xs:annotation>
+			<xs:documentation>Indicates valid Passenger Titles like Mr, Mrs etc</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Inf">
+				<xs:annotation>
+					<xs:documentation>Should be used for infants under 2 years old on return date.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Master">
+				<xs:annotation>
+					<xs:documentation>Should be used for males under 16 years old on return date.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Miss"/>
+			<xs:enumeration value="Ms"/>
+			<xs:enumeration value="Mrs"/>
+			<xs:enumeration value="Mr"/>
+			<xs:enumeration value="Dr"/>
+			<xs:enumeration value="Prof"/>
+			<xs:enumeration value="Rev"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABCustomerType">
+		<xs:annotation>
+			<xs:documentation>Indicates how this customer is treated for the associated itinerary</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Infant"/>
+			<xs:enumeration value="Child"/>
+			<xs:enumeration value="Adult"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABGender">
+		<xs:annotation>
+			<xs:documentation>Indicates what gender is this customer</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Male"/>
+			<xs:enumeration value="Female"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABAttributeType">
+		<xs:annotation>
+			<xs:documentation>Indicates what a FABAttribute relates to</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A">
+				<xs:annotation>
+					<xs:documentation>Accommodation (i.e. Hotel attribute like INDOOR POOL)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="U">
+				<xs:annotation>
+					<xs:documentation>Accommodation Unit (i.e. Coffee Maker)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="R">
+				<xs:annotation>
+					<xs:documentation>Resort (i.e. Water Park)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="P">
+				<xs:annotation>
+					<xs:documentation>Package (i.e. Accommodation Only Reduction)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="O">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AccommodationAttribute">
+		<xs:annotation>
+			<xs:documentation>Contains a selection of characteristics that an Accommodation can have. Starting with Bar and going down to Games_Room the attributes are roughly in decreasing order of commonality. The remaining attributes are special attributes and should be very common.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Bar"/>
+			<xs:enumeration value="Balcony"/>
+			<xs:enumeration value="Pool"/>
+			<xs:enumeration value="Restaurant"/>
+			<xs:enumeration value="TV_Room_Or_In_Room"/>
+			<xs:enumeration value="WC"/>
+			<xs:enumeration value="Lounge"/>
+			<xs:enumeration value="Bath"/>
+			<xs:enumeration value="Hotel_Entertainment"/>
+			<xs:enumeration value="Cots_Available"/>
+			<xs:enumeration value="Poolside_Bar"/>
+			<xs:enumeration value="Shower"/>
+			<xs:enumeration value="Sun_Terrace"/>
+			<xs:enumeration value="Air_Conditioning"/>
+			<xs:enumeration value="Telephone"/>
+			<xs:enumeration value="Shops_Or_Supermarket_Onsite_Or_Nearby"/>
+			<xs:enumeration value="Table_Games"/>
+			<xs:enumeration value="Snack_Bar_Cafe"/>
+			<xs:enumeration value="Kids_Pool"/>
+			<xs:enumeration value="Safety_Deposit_Box"/>
+			<xs:enumeration value="Hairdryer"/>
+			<xs:enumeration value="Highchairs"/>
+			<xs:enumeration value="Childrens_Play_Area"/>
+			<xs:enumeration value="Sunbeds_and_Parasols"/>
+			<xs:enumeration value="Gardens"/>
+			<xs:enumeration value="Sea_View"/>
+			<xs:enumeration value="Sauna_Massage"/>
+			<xs:enumeration value="Disco"/>
+			<xs:enumeration value="Kids_Club"/>
+			<xs:enumeration value="Lifts"/>
+			<xs:enumeration value="Fridge"/>
+			<xs:enumeration value="Jacuzzi_Whirlpool"/>
+			<xs:enumeration value="Cooking_Facilities"/>
+			<xs:enumeration value="Tennis"/>
+			<xs:enumeration value="Watersports"/>
+			<xs:enumeration value="Health_Fitness"/>
+			<xs:enumeration value="Volleyball"/>
+			<xs:enumeration value="Minibar"/>
+			<xs:enumeration value="BBQ"/>
+			<xs:enumeration value="Radio"/>
+			<xs:enumeration value="Laundry_Facilities"/>
+			<xs:enumeration value="Video_Games"/>
+			<xs:enumeration value="Hairdresser"/>
+			<xs:enumeration value="Mini_Golf"/>
+			<xs:enumeration value="Childcare_Babysitting"/>
+			<xs:enumeration value="Sports"/>
+			<xs:enumeration value="Vegetarian"/>
+			<xs:enumeration value="Games_Room"/>
+			<xs:enumeration value="Under_Sixty_Rooms"/>
+			<xs:enumeration value="Sixty_To_Two_Hundred_Rooms"/>
+			<xs:enumeration value="Over_Two_Hundred_Rooms"/>
+			<xs:enumeration value="On_Or_Near_Beach"/>
+			<xs:enumeration value="In_Or_Near_Resort"/>
+			<xs:enumeration value="Hotel"/>
+			<xs:enumeration value="Villa"/>
+			<xs:enumeration value="Apartment"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABBookingChannel">
+		<xs:annotation>
+			<xs:documentation>Indicates the method of Booking a basket component.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="VTX">
+				<xs:annotation>
+					<xs:documentation>Videotex Viewdata systems</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EDI">
+				<xs:annotation>
+					<xs:documentation>Electronic Data Interchange direct connect</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="XML">
+				<xs:annotation>
+					<xs:documentation>XML based web service</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WEB">
+				<xs:annotation>
+					<xs:documentation>HTML Web scraping technology</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FlightClass">
+		<xs:annotation>
+			<xs:documentation>Indicates the flight class, economy, premium, business or first class</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="economy">
+				<xs:annotation>
+					<xs:documentation>Standard economy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="premium">
+				<xs:annotation>
+					<xs:documentation>premium economy flight</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="business">
+				<xs:annotation>
+					<xs:documentation>business class flight</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="first">
+				<xs:annotation>
+					<xs:documentation>first class flight</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="premiumFirst">
+				<xs:annotation>
+					<xs:documentation>premium first class flight</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FormOfIDType">
+		<xs:annotation>
+			<xs:documentation>Indicates the type of Identification provided</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CC">
+				<xs:annotation>
+					<xs:documentation>Credit Card</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FF">
+				<xs:annotation>
+					<xs:documentation>Frequent Flyer Number</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NI">
+				<xs:annotation>
+					<xs:documentation>National ID Card</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ID">
+				<xs:annotation>
+					<xs:documentation>Staff ID Card</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PP">
+				<xs:annotation>
+					<xs:documentation>Passport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="GP">
+				<xs:annotation>
+					<xs:documentation>Group Passport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RD">
+				<xs:annotation>
+					<xs:documentation>Refugee Document</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DL">
+				<xs:annotation>
+					<xs:documentation>Driving License</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABSuccess">
+		<xs:annotation>
+			<xs:documentation>Indicates whether an action was successfull or not, or is still pending</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="true">
+				<xs:annotation>
+					<xs:documentation>successful</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="false">
+				<xs:annotation>
+					<xs:documentation>not successful</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pending">
+				<xs:annotation>
+					<xs:documentation>outcome of action is still pending</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="unattempted">
+                <xs:annotation>
+                    <xs:documentation>booking not yet attempted</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABAccommodationType">
+		<xs:annotation>
+			<xs:documentation>Indicates whether an accommodation is a HOTEL, APARTMENT or UNKNOWN</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Hotel">
+				<xs:annotation>
+					<xs:documentation>Indicates the Accommodation is a Hotel</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Apartments">
+				<xs:annotation>
+					<xs:documentation>Indicates the Accommodation is a set of Apartments</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Villa">
+				<xs:annotation>
+					<xs:documentation>Indicates the Accommodation is a Villa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Riad">
+				<xs:annotation>
+					<xs:documentation>Indicates the Accommodation is a Riad</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Chalet">
+				<xs:annotation>
+					<xs:documentation>Indicates the Accommodation is a Chalet</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:documentation>indicates that we are not sure about the type of accommodation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Dummy">
+				<xs:annotation>
+					<xs:documentation>Indicates a dummy accommodation. For internal use only.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABPaymentAuthorisationMethod">
+		<xs:annotation>
+			<xs:documentation>Indicates whether the payment should be authed, pre-authed or refunded</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="auth"/>
+			<xs:enumeration value="pre"/>
+			<xs:enumeration value="fulfill"/>
+			<xs:enumeration value="refund"/>
+			<xs:enumeration value="erp"/>
+			<xs:enumeration value="txn_refund"/>
+			<xs:enumeration value="cancel"/>
+			<xs:enumeration value="threedsecure_authorization_request"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABPaymentCardType">
+		<xs:annotation>
+			<xs:documentation>Specifies which type of payment card is to be used for booking. (Credit/Debit)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DEBIT_CARD"/>
+			<xs:enumeration value="Visa_Debit"/>
+			<xs:enumeration value="Visa_Delta"/>
+			<xs:enumeration value="Visa_Electron"/>
+			<xs:enumeration value="Visa_Purchasing"/>
+			<xs:enumeration value="Switch"/>
+			<xs:enumeration value="Solo"/>
+			<xs:enumeration value="Maestro"/>
+			<xs:enumeration value="CREDIT_CARD"/>
+			<xs:enumeration value="Visa_Credit"/>
+			<xs:enumeration value="Mastercard"/>
+			<xs:enumeration value="American_Express"/>
+			<xs:enumeration value="Diners_Club"/>
+			<xs:enumeration value="Jcb"/>
+			<xs:enumeration value="Laser"/>
+			<xs:enumeration value="Pre_Paid_Mastercard"/>
+			<xs:enumeration value="Debit_Mastercard"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CV2SecurityNumberType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABCardPaymentAuthorisationMode">
+		<xs:annotation>
+			<xs:documentation>Mode of Authorisation of a card payment.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="card_only">
+				<xs:annotation>
+					<xs:documentation>Neither CV2 NOT AVS is carried out. Only the card number and expiry dates are checked</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cv2_only">
+				<xs:annotation>
+					<xs:documentation>Indicates a Credit or Debit Card payment using that is authorised by asking for the 3 digit security code on the back of the card. </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="address_only">
+				<xs:annotation>
+					<xs:documentation>Indicates a Credit or Debit Card payment using an address dip to authorise the end user. The card holders address for ticket delivery must also match the registered card address.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="postcode_only">
+				<xs:annotation>
+					<xs:documentation>Indicates a Credit or Debit Card payment using an address dip to authorise the end user. the given PostCode must match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cv2_and_address">
+				<xs:annotation>
+					<xs:documentation>CV2 check and address check must match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cv2_and_postcode">
+				<xs:annotation>
+					<xs:documentation>CV2 check and postcode check must match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="address_and_postcode">
+				<xs:annotation>
+					<xs:documentation>address check and postcode check must match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="all">
+				<xs:annotation>
+					<xs:documentation>all three checks must match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABPaymentCardOrigin">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the origin of the payment card</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Lodged"/>
+			<xs:enumeration value="CorporatePay"/>
+			<xs:enumeration value="Orbiscom"/>
+			<xs:enumeration value="Ixaris"/>
+			<xs:enumeration value="VNett"/>
+			<xs:enumeration value="Multicommerce"/>
+			<xs:enumeration value="Request"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OTA_CodeType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Used for codes in the OTA code tables. Possible values of this pattern are 1, 101, 101.EQP, or 101.EQP.X.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9A-Z]{1,3}(\.[A-Z]{3}(\.X){0,1}){0,1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABPricingType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines how a service is priced.  Values:  Per stay,  Per person, Per night, Per person per night,  Per use.  </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Per stay"/>
+			<xs:enumeration value="Per person"/>
+			<xs:enumeration value="Per night"/>
+			<xs:enumeration value="Per person per night"/>
+			<xs:enumeration value="Per use"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABApplyToType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines how an option is chosen.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NoPax"/>
+			<xs:enumeration value="AllPax"/>
+			<xs:enumeration value="SelectedPax"/>
+			<xs:enumeration value="MandatorilySelectedPax"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABUnitCostMultiplierType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines what the unit cost should be multipied.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="AllPax"/>
+			<xs:enumeration value="Adults"/>
+			<xs:enumeration value="AdultsAndChildren"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABGroupRuleCode">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines how groups of things can be used together</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OneOf"/>
+			<xs:enumeration value="OneOrNone"/>
+			<xs:enumeration value="AllOrNone"/>
+			<xs:enumeration value="OneOfPerPax"/>
+			<xs:enumeration value="Required"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABProductType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the type of a product that is bookable within FAB</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Undefined"/>
+			<xs:enumeration value="Package"/>
+			<xs:enumeration value="Flight"/>
+			<xs:enumeration value="Accommodation"/>
+			<xs:enumeration value="CarHire"/>
+			<xs:enumeration value="Transfer"/>
+			<xs:enumeration value="CarParking"/>
+			<xs:enumeration value="Rail"/>
+			<xs:enumeration value="Cruise"/>
+			<xs:enumeration value="Insurance"/>
+			<xs:enumeration value="Attraction"/>
+			<xs:enumeration value="BaggageTracking"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABSupplierType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the type of supplier</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="TourOperator"/>
+			<xs:enumeration value="ScheduledCarrier"/>
+			<xs:enumeration value="NoFrillsCarrier"/>
+			<xs:enumeration value="Consolidator"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABPriceType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines who or what a price relates to</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PartyPrice"/>
+			<xs:enumeration value="UnitPrice"/>
+			<xs:enumeration value="PassengerPrice"/>
+			<xs:enumeration value="AdultPrice"/>
+			<xs:enumeration value="ChildPrice"/>
+			<xs:enumeration value="InfantPrice"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABCostType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the type of cost</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="StandardCost"/>
+			<xs:enumeration value="SpecialCost"/>
+			<xs:enumeration value="TaxCost"/>
+			<xs:enumeration value="ExtraDiscount"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABAgentType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the type of Agent responsible for the transaction within FAB</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DirectNoAgent">
+				<xs:annotation>
+					<xs:documentation>Direct sell with no agent (e.g. B2C website)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DirectAgent">
+				<xs:annotation>
+					<xs:documentation>Direct with no agent (e.g. Call centre or Shop)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ThirdPartyAgent">
+				<xs:annotation>
+					<xs:documentation>Third party agent (i.e. the agent does not work for the syndicator but is using their system)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CurrencyCode">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Identifies a Currency within FAB. Standard ISO currency codes.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABUserRole">
+		<xs:annotation>
+			<xs:documentation>The role of a user in the FAB System</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SuperAdmin">
+				<xs:annotation>
+					<xs:documentation>Can read and write everything. Only Multicom staff should be SuperAdmins and only SuperAdmins can create SyndicatorAdmins.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SyndicatorAdmin">
+				<xs:annotation>
+					<xs:documentation>Allows creation of new syndicators and editing of ALL existing syndicators config including creation of Admin users.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Admin">
+				<xs:annotation>
+					<xs:documentation>Attached to a specific Syndicator. Allows editing of all syndicator config and creation of SuperUsers with variable permissions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="SuperUser">
+				<xs:annotation>
+					<xs:documentation>Attached to a specific Syndicator. Allows editing of syndicator config as defined in the permissins bestowed on the SuperUser.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="User">
+				<xs:annotation>
+					<xs:documentation>A regular user attached to a syndicator. Cannot edit anything.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Guest">
+				<xs:annotation>
+					<xs:documentation>Guest account allows some anonymous functionality.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABPermissionGroup">
+		<xs:annotation>
+			<xs:documentation>Defines the type of a FABPermission</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="User">
+				<xs:annotation>
+					<xs:documentation>User related permissions</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Pricing">
+				<xs:annotation>
+					<xs:documentation>Pricing related permissions.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Promotions">
+				<xs:annotation>
+					<xs:documentation>Promotions related rules.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Other">
+				<xs:annotation>
+					<xs:documentation>Rules relating to other things.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABStringMatchingRuleType">
+		<xs:annotation>
+			<xs:documentation>Defines the way that string matching is perfromed in FAB</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ExactMatch">
+				<xs:annotation>
+					<xs:documentation>The String must match the rule text exactly</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AnyCaseMatch">
+				<xs:annotation>
+					<xs:documentation>Must match exactly but ignoring case differences</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RegEx">
+				<xs:annotation>
+					<xs:documentation>The string must match the regular expression contained in the RuleText</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABOptionalExtraType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the type of optional extras</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Meal"/>
+			<xs:enumeration value="Transfer"/>
+			<xs:enumeration value="Flight"/>
+			<xs:enumeration value="Room"/>
+			<xs:enumeration value="Sports"/>
+			<xs:enumeration value="Insurance"/>
+			<xs:enumeration value="CarHire"/>
+			<xs:enumeration value="Baggage"/>
+			<xs:enumeration value="Attractions"/>
+			<xs:enumeration value="Bedding"/>
+			<xs:enumeration value="Excursion"/>
+			<xs:enumeration value="Donation"/>
+			<xs:enumeration value="Theatre"/>
+			<xs:enumeration value="HealthAndBeauty"/>
+			<xs:enumeration value="Kids"/>
+			<xs:enumeration value="Creative"/>
+			<xs:enumeration value="ThemePark"/>
+			<xs:enumeration value="Experience"/>
+			<xs:enumeration value="Other"/>
+			<xs:enumeration value="Unrecognised"/>
+			<xs:enumeration value="BaggageTracking"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FareType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the type of fare. Published, Private (nett) or NoFrills (low cost e.g. EasyJet)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Published"/>
+			<xs:enumeration value="Private"/>
+			<xs:enumeration value="NegoCorporate"/>
+			<xs:enumeration value="NoFrills"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PostBookingPolicyType">
+		<xs:annotation>
+			<xs:documentation>
+			An enumerated type to denote the general types of post booking policy. 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="amend">
+				<xs:annotation>
+					<xs:documentation>
+					Amend policies contain information relating to changing existing entities in a booking.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="amend_person_name">
+				<xs:annotation>
+					<xs:documentation>
+					A specialisation of an amend policy that relates only to changing the names of customer entities 
+					participating in the booking.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cancel">
+				<xs:annotation>
+					<xs:documentation>
+					Cancel policies contain information relating removing existing domain entities from a booking.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ServiceType">
+		<xs:annotation>
+			<xs:documentation>
+			An enumerated type to denote the possible methods post booking operations can utilise 
+			for the associated booking.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="synchronous_api">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes that the post booking operation can be performed programatically and in 
+					a synchronous manner. This implies the client can immediately know the outcome. 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="asynchronous_api">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes that the post booking operation can be performed programatically but in 
+					an synchronous manner. This implies the client may require further actions to know 
+					the outcome. 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="web_url_redirect">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes that the post booking operation can be performed through exposing a URL that
+					targets a supplier web page that allow the specified operation to be carried out by a 
+					human User.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="manual">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes that the post booking operation cannot be performed programmatically but instead 
+					must be resolved manually in a call-centre in an asynchronous manner. This implies the 
+					client must be able to determine the outcome at a later stage.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OperationType">
+		<xs:annotation>
+			<xs:documentation>
+			An enumerated type to denote the possible post booking operations that can be utilise for the associated 
+			booking.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="add">
+				<xs:annotation>
+					<xs:documentation>
+						Add operations add new entities to a booking.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="amend">
+				<xs:annotation>
+					<xs:documentation>
+						Amend operations amend existing entities in a booking.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cancel">
+				<xs:annotation>
+					<xs:documentation>
+						Cancel operations remove existing entities from a booking.					
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EntityType">
+		<xs:annotation>
+			<xs:documentation>
+			An enumerated type to denote the possible entities post booking operations can operate upon. More entity type may be added in the 
+			future.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="itinerary">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is an Itinerary entity. The Itinerary is a container for other entities such as the Party and ItineraryComponents.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="person">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is a Person entity in an Itinerary. The Person is part of a Party.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="infant">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is a person entity. The entity is part of a Party.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="child">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is a child person entity. The entity is part of a Party.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="person_name">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is a person entity's name. Is part of a Person.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lead_name">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is lead person entity's name. Is part of a Person.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="itinerary_component">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is a travel entity in an Itinerary (flight, transfer, train, accommodation etc.). This is essentially a supplier booking 
+					and all the options entailed within it.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="travel_segment">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is an itinerary TravelSegment The travel entity is part of a supplier booking and is a type of ItineraryComponent.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="travel_subsegment">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is an itinerary TravelSubSegment The entity is part of an TravelSegment.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="accommodation_segment">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is an itinerary AccommodationSegment The entity is part of a supplier booking and is a type of ItineraryComponent.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="accommodation_unit">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is an itinerary AccommodationUnit. The entity is part of an AccommodationSegment.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="option">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is an option entity in an Itinerary Component (meal choice, board code, etc.). The option entity is part of an associated component.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="extra">
+				<xs:annotation>
+					<xs:documentation>
+					The subject is an extra entity in an Itinerary (insurance, etc.) and is a type of ItineraryComponent.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PostBookingPolicySource">
+		<xs:annotation>
+			<xs:documentation>
+			An enumerated type to denote the sources of post booking policy. 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="supplier">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes that the the post booking policy is requested from the supplier every time.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hard_coded">
+				<xs:annotation>
+					<xs:documentation>
+					Denotes that the post booking policy is hardcoded in the source code based on 
+					the information derived from the suppier API documentation at the time of coding.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FABSessionIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Denotes that the id string to be ascii characters, numbers, underscores or hyphens of zero characters or 24 characters or more.  Used to set FABSessionId.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="^$|[A-Za-z0-9_\-]{24,}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BasketIdType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">Denotes that the id string to be ascii characters, numbers, underscores or hyphens of 24 characters or more.  Used to set BasketId.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9_\-]{24,}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FullSupplierName">
+		<xs:restriction base="xs:string">
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RefundType">
+	   <xs:annotation>
+	       <xs:documentation xml:lang="en">
+	           An enumerated type to denote the refundability of a RoomRate.
+	       </xs:documentation>
+	   </xs:annotation>
+	   <xs:restriction base="xs:string">
+	       <xs:enumeration value="refundable">
+	           <xs:annotation>
+	               <xs:documentation>
+	                   Denotes that a RoomRate is refundable.
+	               </xs:documentation>
+	           </xs:annotation>
+	       </xs:enumeration>
+	       <xs:enumeration value="non_refundable">
+	           <xs:annotation>
+	               <xs:documentation>
+	                   Denotes that a RoomRate is non-refundable.
+	               </xs:documentation>
+	           </xs:annotation>
+	       </xs:enumeration>
+	       <xs:enumeration value="unknown">
+	           <xs:annotation>
+	               <xs:documentation>
+	               Denotes that the refundability of a RoomRate is unknown.
+	               </xs:documentation>
+	           </xs:annotation>
+	       </xs:enumeration>
+	   </xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FlightDirection">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">An enumerated type that defines the direction of travel</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="outbound"/>
+			<xs:enumeration value="homebound"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PaxType">
+		<xs:annotation>
+			<xs:documentation>An enumeration that defines passenger types</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Adult"/>
+			<xs:enumeration value="Child"/>
+			<xs:enumeration value="Infant"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ChargeType">
+		<xs:annotation>
+			<xs:documentation>An enumaration of different possible charge types</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Fare"/>
+			<xs:enumeration value="SuppsTaxes"/>
+			<xs:enumeration value="Baggage"/>
+			<xs:enumeration value="EstimatedPaymentCardCharge"/>
+			<xs:enumeration value="SupplierBookingFee"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

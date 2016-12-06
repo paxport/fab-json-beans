@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.xmltravel.com/fab/2002/09"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.xmltravel.com/fab/2002/09"
+	elementFormDefault="qualified" version="1.105">
+	
+	<xs:simpleType name="TextStyle">
+		<xs:annotation>
+			<xs:documentation>Specifies the formatting type of content</xs:documentation>
+		</xs:annotation>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="emphasise" />
+			</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<xs:complexType name="NonHeadingContentItem">
+		<xs:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="Break" type="Break" />
+			<xs:element name="Text" type="Text" />
+			<xs:element name="BulletList" type="BulletList" />
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="ContentHeading">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Level" type="xs:int" use="optional" default="1" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="Break" />
+	<xs:complexType name="Text">
+		<xs:sequence>
+			<xs:element name="TextPart" type="TextPart" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TextPart">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="style" type="TextStyle" use="optional" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+		<xs:complexType name="ContentItem">
+		<xs:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="Break" type="Break" />
+			<xs:element name="Text" type="Text" />
+			<xs:element name="BulletList" type="BulletList" />
+			<xs:element name="Heading" type="ContentHeading" />
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="BulletPoint">
+		<xs:annotation><xs:documentation>A bullet point list</xs:documentation></xs:annotation>
+		<xs:sequence>
+			<xs:element name="ContentItem" type="NonHeadingContentItem" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="BulletList">
+		<xs:annotation><xs:documentation>A bullet point list</xs:documentation></xs:annotation>
+		<xs:sequence>
+			<xs:element name="BulletPoint" type="BulletPoint" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Content">
+		<xs:sequence>
+			<xs:element name="ContentItem" type="ContentItem" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="FormattedContent">
+		<xs:choice>
+			<xs:element name="RawContent" type="Content" />
+			<xs:element name="UnformattedContent" type="xs:string" />
+			<xs:element name="XHTMLContent" type="xs:string" />
+		</xs:choice>
+		<xs:attribute name="Label" type="xs:string" use="optional" />
+	</xs:complexType>
+</xs:schema>
