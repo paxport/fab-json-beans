@@ -1,0 +1,1546 @@
+{
+  "type" : "Basket",
+  "CurrentlyActive" : false,
+  "Status" : "successfully booked this basket",
+  "BasketId" : "foofoo",
+  "TargetBookingStage" : "booked",
+  "CurrentBookingStage" : "booked",
+  "ConsumersReference" : "null-Fri Nov 18 00:00:00 GMT 2016-Bvv-ref:sxh",
+  "Itinerary" : {
+    "ItineraryId" : "si3993",
+    "ItineraryReference" : "ssss",
+    "StartDate" : "20161118",
+    "EndDate" : "20161121",
+    "NumNights" : 3,
+    "Availability" : "available",
+    "BookableByFab" : true,
+    "Currency" : "GBP",
+    "PassengerIdRequired" : true,
+    "PassengerIdMandatory" : false,
+    "NationalityRequired" : true,
+    "VatRequired" : false,
+    "NationalityMandatory" : false,
+    "PassengerFullMiddleNameMandatory" : false,
+    "TravelSegments" : {
+      "TravelSegment" : [ {
+        "ComponentId" : "1",
+        "DeparturePoint" : "LGW",
+        "ArrivalPoint" : "AGP",
+        "Transport" : "air",
+        "Type" : "outbound",
+        "DepartureDate" : "20161118",
+        "DepartureTime" : "0650",
+        "ArrivalDate" : "20161118",
+        "ArrivalTime" : "1040",
+        "Supplier" : "EZJ",
+        "SupplierName" : "EasyJet",
+        "ItineraryId" : "F!EZJ!LGW!GBI6o!AGP!EZY!EZY!8601!economy!!E!N!N!Y",
+        "Currency" : "GBP",
+        "FlightClass" : "economy",
+        "OperatedBy" : "easyJet",
+        "OperatingCarrier" : "EZY",
+        "MarketingCarrier" : "EZY",
+        "MarketedBy" : "easyJet",
+        "JourneyMins" : 170,
+        "FareClass" : "Y",
+        "DeparturePointName" : "London Gatwick",
+        "ArrivalPointName" : "Malaga",
+        "FareType" : "NoFrills",
+        "ITFare" : false,
+        "CAT35Fare" : false,
+        "CabinClass" : "economy",
+        "TicketInfo" : {
+          "FlightNumber" : "EZY8601",
+          "DepartureTerminal" : "North Terminal"
+        }
+      }, {
+        "ComponentId" : "1",
+        "DeparturePoint" : "AGP",
+        "ArrivalPoint" : "LGW",
+        "Transport" : "air",
+        "Type" : "homebound",
+        "DepartureDate" : "20161121",
+        "DepartureTime" : "2110",
+        "ArrivalDate" : "20161121",
+        "ArrivalTime" : "2300",
+        "Supplier" : "EZJ",
+        "SupplierName" : "EasyJet",
+        "ItineraryId" : "F!EZJ!AGP!GBLLA!LGW!EZY!EZY!8610!economy!!E!N!N!Y",
+        "Currency" : "GBP",
+        "FlightClass" : "economy",
+        "OperatedBy" : "easyJet",
+        "OperatingCarrier" : "EZY",
+        "MarketingCarrier" : "EZY",
+        "MarketedBy" : "easyJet",
+        "JourneyMins" : 170,
+        "FareClass" : "Y",
+        "DeparturePointName" : "Malaga",
+        "ArrivalPointName" : "London Gatwick",
+        "FareType" : "NoFrills",
+        "ITFare" : false,
+        "CAT35Fare" : false,
+        "CabinClass" : "economy",
+        "TicketInfo" : {
+          "FlightNumber" : "EZY8610",
+          "ArrivalTerminal" : "North Terminal"
+        }
+      } ]
+    },
+    "AccommodationSegments" : {
+      "AccommodationSegment" : [ {
+        "ComponentId" : "2",
+        "AccommodationCode" : "EXP|176995",
+        "AccommodationId" : "11527696",
+        "AccommodationName" : "H10 Andalucia Plaza Hotel",
+        "BrandName" : "Expedia",
+        "ResortName" : "Puerto Banus",
+        "ResortId" : "1291",
+        "MaxChildAge" : 17,
+        "StartDate" : "20161118",
+        "EndDate" : "20161121",
+        "BoardCode" : "HB",
+        "ClassCode" : "4*",
+        "Supplier" : "EXP",
+        "SupplierPrincipalAssured" : false,
+        "SupplierName" : "Expedia Hotels from MedHotels",
+        "NumNights" : 3,
+        "BasicAdultCost" : 380.46,
+        "Currency" : "GBP",
+        "Type" : "Hotel",
+        "SpecialOffer" : false,
+        "AvailableBoardBasis" : [ "BB", "HB", "FB" ],
+        "Address" : {
+          "Address1" : "Urb Nueva Andalucia",
+          "CityOrTown" : "Marbella",
+          "PostCode" : "29660",
+          "Country" : "ES"
+        },
+        "Description" : "With a stay at H10 Andalucia Plaza - Adults Only in Marbella (Puerto\n                    Banus), you'll be minutes from Centro Plaza and close to Puerto Banus Marina.\n                    This 4-star hotel is within close proximity of El Corte Ingles Shopping Center\n                    and Ralli Museum. Make yourself at home in one of the 400 air-conditioned rooms\n                    featuring minibars. Rooms have private balconies. Complimentary wireless\n                    Internet access keeps you connected, and satellite programming is available for\n                    your entertainment. Private bathrooms have deep soaking bathtubs and\n                    complimentary toiletries. Pamper yourself with a visit to the spa, which offers\n                    massages, body treatments, and facials. Gambling sorts can try their luck at the\n                    casino, while others may prefer an outdoor pool or a spa tub. This Art Deco\n                    hotel also features complimentary wireless Internet access, concierge services,\n                    and gift shops/newsstands. Getting to nearby attraction...\n                ",
+        "GeoPosition" : {
+          "Latitude" : "36.4885",
+          "Longitude" : "-4.9611"
+        },
+        "AccommodationUnits" : {
+          "AccommodationUnit" : [ {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room - NON-REFUNDABLE - NON-REFUNDABLE - Bed and Breakfast",
+            "Code" : "3660508BB",
+            "NumRooms" : 1,
+            "AUID" : "B3660508",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 380.46,
+              "Currency" : "GBP",
+              "BoardBasis" : "BB",
+              "RefundType" : "non_refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room Pool View - NON-REFUNDABLE - NON-REFUNDABLE - Bed and Breakfast",
+            "Code" : "3660517BB",
+            "NumRooms" : 1,
+            "AUID" : "B3660517",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 432.54,
+              "Currency" : "GBP",
+              "BoardBasis" : "BB",
+              "RefundType" : "non_refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room - NON-REFUNDABLE - NON-REFUNDABLE - Half Board",
+            "Code" : "3660520HB",
+            "NumRooms" : 1,
+            "AUID" : "B3660520",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 491.56,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "non_refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room (Free Style) - Bed and Breakfast",
+            "Code" : "5825064BB",
+            "NumRooms" : 1,
+            "AUID" : "B5825064",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 526.16,
+              "Currency" : "GBP",
+              "BoardBasis" : "BB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Deluxe Room - Breakfast Included - Bed and Breakfast",
+            "Code" : "3660528BB",
+            "NumRooms" : 1,
+            "AUID" : "B3660528",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 533.07,
+              "Currency" : "GBP",
+              "BoardBasis" : "BB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room Pool View - NON-REFUNDABLE - NON-REFUNDABLE - Half Board",
+            "Code" : "3660526HB",
+            "NumRooms" : 1,
+            "AUID" : "B3660526",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 543.66,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "non_refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double or Twin Room (with extra bed) - Breakfast Included - Bed and Breakfast",
+            "Code" : "3660530BB",
+            "NumRooms" : 1,
+            "AUID" : "B3660530",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 567.83,
+              "Currency" : "GBP",
+              "BoardBasis" : "BB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room - NON-REFUNDABLE - NON-REFUNDABLE - Full Board",
+            "Code" : "3660532FB",
+            "NumRooms" : 1,
+            "AUID" : "B3660532",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 630.22,
+              "Currency" : "GBP",
+              "BoardBasis" : "FB",
+              "RefundType" : "non_refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room (Free Style) - Half Board",
+            "Code" : "5825066HB",
+            "NumRooms" : 1,
+            "AUID" : "B5825066",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 637.2,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Deluxe Room - Half Board - Half Board",
+            "Code" : "3660537HB",
+            "NumRooms" : 1,
+            "AUID" : "B3660537",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 644.11,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Junior Suite - Breakfast Included - Bed and Breakfast",
+            "Code" : "3670463BB",
+            "NumRooms" : 1,
+            "AUID" : "B3670463",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 653.3,
+              "Currency" : "GBP",
+              "BoardBasis" : "BB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room Privilege - Breakfast Included - Bed and Breakfast",
+            "Code" : "3660540BB",
+            "NumRooms" : 1,
+            "AUID" : "B3660540",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 653.3,
+              "Currency" : "GBP",
+              "BoardBasis" : "BB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room Pool View - NON-REFUNDABLE - NON-REFUNDABLE - Full Board",
+            "Code" : "3660542FB",
+            "NumRooms" : 1,
+            "AUID" : "B3660542",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 685.31,
+              "Currency" : "GBP",
+              "BoardBasis" : "FB",
+              "RefundType" : "non_refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double or Twin Room (with extra bed) - Half Board - Half Board",
+            "Code" : "3660544HB",
+            "NumRooms" : 1,
+            "AUID" : "B3660544",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 734.42,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room Privilege - Half Board - Half Board",
+            "Code" : "3660547HB",
+            "NumRooms" : 1,
+            "AUID" : "B3660547",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 764.34,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Junior Suite - Half Board - Half Board",
+            "Code" : "3670464HB",
+            "NumRooms" : 1,
+            "AUID" : "B3670464",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 764.34,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room (Free Style) - Full Board",
+            "Code" : "5825067FB",
+            "NumRooms" : 1,
+            "AUID" : "B5825067",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 775.97,
+              "Currency" : "GBP",
+              "BoardBasis" : "FB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Deluxe Room - Full Board - Full Board",
+            "Code" : "3660550FB",
+            "NumRooms" : 1,
+            "AUID" : "B3660550",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 782.88,
+              "Currency" : "GBP",
+              "BoardBasis" : "FB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room Privilege - Full Board - Full Board",
+            "Code" : "3660553FB",
+            "NumRooms" : 1,
+            "AUID" : "B3660553",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 903.17,
+              "Currency" : "GBP",
+              "BoardBasis" : "FB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Junior Suite - Full Board - Full Board",
+            "Code" : "3670466FB",
+            "NumRooms" : 1,
+            "AUID" : "B3670466",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 903.17,
+              "Currency" : "GBP",
+              "BoardBasis" : "FB",
+              "RefundType" : "refundable"
+            } ]
+          }, {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double or Twin Room (with extra bed) - Full Board - Full Board",
+            "Code" : "3660556FB",
+            "NumRooms" : 1,
+            "AUID" : "B3660556",
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 942.61,
+              "Currency" : "GBP",
+              "BoardBasis" : "FB",
+              "RefundType" : "refundable"
+            } ]
+          } ]
+        },
+        "ChosenAccommodationUnits" : {
+          "AccommodationUnit" : [ {
+            "MaxOccupancy" : 2,
+            "MinOccupancy" : 2,
+            "MaxExtraChildren" : 0,
+            "MaxExtraInfants" : 0,
+            "QuantityAvailable" : 1,
+            "Name" : "Double Room - NON-REFUNDABLE - NON-REFUNDABLE - Half Board",
+            "Code" : "3660520HB",
+            "NumRooms" : 1,
+            "AUID" : "B3660520",
+            "OccupancyDetails" : {
+              "NumAdults" : 2,
+              "NumChildren" : 0,
+              "NumInfants" : 0
+            },
+            "RoomRate" : [ {
+              "StartDate" : "20161118",
+              "EndDate" : "20161121",
+              "Amount" : 491.56,
+              "Currency" : "GBP",
+              "BoardBasis" : "HB",
+              "RefundType" : "non_refundable"
+            } ]
+          } ]
+        },
+        "Image" : [ {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/tpbqfs_large.jpg",
+          "CaptionText" : "img_01"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/lmogtmx_large.jpg",
+          "CaptionText" : "img_02"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/mcftzpf_large.jpg",
+          "CaptionText" : "img_03"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/nuaeaaf_large.jpg",
+          "CaptionText" : "img_04"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/bjaeymz_large.jpg",
+          "CaptionText" : "img_05"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/bkhitgk_large.jpg",
+          "CaptionText" : "img_06"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/filxkpa_large.jpg",
+          "CaptionText" : "img_07"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/mhvcxnm_large.jpg",
+          "CaptionText" : "img_08"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/nkhhudm_large.jpg",
+          "CaptionText" : "img_09"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/lcogeoy_large.jpg",
+          "CaptionText" : "img_10"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/btxkqlv_large.jpg",
+          "CaptionText" : "img_11"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/brtzcuq_large.jpg",
+          "CaptionText" : "img_12"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/ismmpcf_large.jpg",
+          "CaptionText" : "img_12"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/gbtmotra_large.jpg",
+          "CaptionText" : "img_13"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/hohniuc_large.jpg",
+          "CaptionText" : "img_13"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/gaegnoh_large.jpg",
+          "CaptionText" : "img_14"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/hvrgvbs_large.jpg",
+          "CaptionText" : "img_14"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/kiufxkj_large.jpg",
+          "CaptionText" : "img_15"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/kqoaxkd_large.jpg",
+          "CaptionText" : "img_15"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/fjsbcwy_large.jpg",
+          "CaptionText" : "img_16"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/jjcrfxk_large.jpg",
+          "CaptionText" : "img_17"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/keppqji_large.jpg",
+          "CaptionText" : "img_18"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/hoogkqv_large.jpg",
+          "CaptionText" : "img_19"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/ohvcgtcv_large.jpg",
+          "CaptionText" : "img_19"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/dpcdqwt_large.jpg",
+          "CaptionText" : "img_20"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/qouubblx_large.jpg",
+          "CaptionText" : "img_20"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/biplydd_large.jpg",
+          "CaptionText" : "img_21"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/wkxuwprx_large.jpg",
+          "CaptionText" : "img_21"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/fcqytek_large.jpg",
+          "CaptionText" : "img_22"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/ocbzbwkt_large.jpg",
+          "CaptionText" : "img_22"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/fxstcwy_large.jpg",
+          "CaptionText" : "img_23"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/wxnpufcu_large.jpg",
+          "CaptionText" : "img_23"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/haunvsl_large.jpg",
+          "CaptionText" : "img_24"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/zlemjgoq_large.jpg",
+          "CaptionText" : "img_24"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/burrpdr_large.jpg",
+          "CaptionText" : "img_25"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/wtcfksse_large.jpg",
+          "CaptionText" : "img_25"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/czdzxas_large.jpg",
+          "CaptionText" : "img_26"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/wrbjkcua_large.jpg",
+          "CaptionText" : "img_26"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/hkaclfqq_large.jpg",
+          "CaptionText" : "img_27"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/yqkqwz_large.jpg",
+          "CaptionText" : "img_27"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/aehiyztq_large.jpg",
+          "CaptionText" : "img_28"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/diajbul_large.jpg",
+          "CaptionText" : "img_28"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/teidvwuy_large.jpg",
+          "CaptionText" : "img_29"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/adforpcy_large.jpg",
+          "CaptionText" : "img_30"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/ivqegvt_large.jpg",
+          "CaptionText" : "img_31"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/gsfmwknz_large.jpg",
+          "CaptionText" : "img_32"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/awhcjzsg_large.jpg",
+          "CaptionText" : "img_33"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/nccmpljh_large.jpg",
+          "CaptionText" : "img_34"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/cifpiuig_large.jpg",
+          "CaptionText" : "img_35"
+        }, {
+          "URL" : "https://storage.sbg1.cloud.ovh.net/v1/AUTH_d293694bbecc4f818ee7da10f371d1ec/TCImages/pics/accom/32/ywycziwb/egecjylh_large.jpg",
+          "CaptionText" : "img_36"
+        } ]
+      } ]
+    },
+    "ImportantInformation" : {
+      "Errata" : [ {
+        "SupplierCode" : "EZJ",
+        "ComponentId" : "1",
+        "Text" : "Please request UK APD tax refund for children aged 2-11 at www.easyjet.com/apd"
+      }, {
+        "SupplierCode" : "EZJ",
+        "ComponentId" : "1",
+        "Code" : "Online Check-in",
+        "Text" : "Easyjet now REQUIRE All Passengers to Check-in Online, and to print their Boarding Pass, Prior to arrival at the Airport. Online Check-in can be performed on Easyjet.com from 30 days prior to departure, using only the Lead Passenger Surname and Easyjet flight Booking Reference. Failure to do this may result in delays at the Airport during Checkin."
+      }, {
+        "SupplierCode" : "EZJ",
+        "ComponentId" : "1",
+        "Code" : "APIS Required",
+        "Text" : "(Passport) Advanced Passenger information must be provided prior to arrival at the airport, or the Flight Carrier may deny travel. Please contact Customer Support to provide this information"
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "Description",
+        "Text" : "Shuttles are a shared transfer option and are a cheap, fast and effective way of travelling to and from your accommodation in a place you may be unfamiliar with. They're cheaper as they run to a schedule, and won't go to private addresses/villas. Shuttles will either deliver to the door of the hotel or where this isn?t possible the nearest appropriate stopping place for your property. Transfer times are estimated and can vary dependent upon traffic and/or the number of stops made. These are available in many locations worldwide, and may range in size from a minibus to a large coach."
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "Booking Voucher URL",
+        "Text" : "https://www2.holidaytaxis.com/en/email/voucher?data=v8p5kLB2oqpyk5xjs6KTz9GY4OpcyNZf5NuWj9Cn3%2BI%3D"
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "Outbound Instructions",
+        "Text" : "LOCATING YOUR DRIVEROnce you have collected your luggage, please proceed to the arrivals hall where a BUS DIRECTO representative will be waiting holding a sign with your name on it. Please identify yourself by showing them a copy of your booking voucher.Please be aware that there may be a wait for your shuttle at the airport as they run to a schedule. Maximum wait time 1 hour. Once all passengers have been met, you will be escorted to the bus or a waiting area.DIFFICULTY IN LOCATING YOUR TRANSFERIn the unlikely event you should have any difficulty in locating your designated driver - please call our emergency helpline where an English speaking representative will help you. (If calling from a mobile, the international dialing code must be dialed. If calling from a land line there is no need)."
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "Emergency Number",
+        "Text" : "0034 952 380 295 / 0034 952 380 297 / 0034 685 857 759"
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "UK Emergency Number",
+        "Text" : "+44 1273 828 200"
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "Office Hours (Mon-Fri)",
+        "Text" : "08:00 - 22:00"
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "Office Hours (Sat)",
+        "Text" : ""
+      }, {
+        "SupplierCode" : "HTX",
+        "Code" : "Inbound Instructions",
+        "Text" : "How to find out your pick up time?It is vitally important and compulsory that you contact your supplier (telephone numbers below) 48 hours prior to departure and during their office hours in order to be given your actual pick up time.Alternatively you can check the WEBSITEPlease visit www.holidaytaxis.com/en/index/getbooking approx 48 hours prior to your departure and follow instructions on the screen to gain your actual pick up time.The supplier will not accept responsibility for missed shuttle transfers and/or subsequent missed flights due to non reconfirmation of pick up times.Important: All amendments on pick up times for shuttle services need to be completed 48 hours before the date of departure in order to confirm availability. After this time, it may not be possible for your supplier to change your pick up time.Please be aware that as Shuttles run to a schedule, you will be required to wait in your hotel?s reception area 15 minutes before your designated pick up time. Please allow a few minutes for your shuttle to arrive but do not hesitate to contact your supplier should this exceed 15 minutes."
+      } ]
+    },
+    "OptionalExtras" : {
+      "OptionalExtra" : [ {
+        "ID" : "AIRPORT|ACCOMMODATION",
+        "Code" : "T!HTX!505413:2:3!GBIAe!IATA!AGP!GEO!-4606100316399550962,4630332117153352778!GBLLA",
+        "Supplier" : "HTX",
+        "StartDate" : "20161118",
+        "EndDate" : "20161121",
+        "Quantity" : 1,
+        "ResortName" : "Puerto Banus",
+        "AdditionalItineraryInfo" : [ {
+          "TravelSegments" : {
+            "TravelSegment" : [ {
+              "DeparturePoint" : "LGW",
+              "ArrivalPoint" : "AGP",
+              "Type" : "outbound",
+              "DepartureDate" : "20161118",
+              "DepartureTime" : "0000",
+              "ArrivalDate" : "20161118",
+              "ArrivalTime" : "1040",
+              "TravelCode" : "EZY8601",
+              "Currency" : "GBP",
+              "TicketInfo" : {
+                "FlightNumber" : "EZY8601"
+              }
+            }, {
+              "DeparturePoint" : "AGP",
+              "ArrivalPoint" : "LGW",
+              "Type" : "homebound",
+              "DepartureDate" : "20161121",
+              "DepartureTime" : "2110",
+              "ArrivalDate" : "20161121",
+              "ArrivalTime" : "2359",
+              "TravelCode" : "EZY8610",
+              "Currency" : "GBP",
+              "TicketInfo" : {
+                "FlightNumber" : "EZY8610"
+              }
+            } ]
+          },
+          "AccommodationSegments" : {
+            "AccommodationSegment" : [ {
+              "AccommodationCode" : "EXP|176995",
+              "AccommodationId" : "11527696",
+              "AccommodationName" : "H10 Andalucia Plaza Hotel",
+              "ResortName" : "Puerto Banus",
+              "Supplier" : "EXP",
+              "Currency" : "GBP",
+              "Type" : "Unknown",
+              "Address" : {
+                "Address1" : "Urb Nueva Andalucia",
+                "CityOrTown" : "Marbella",
+                "PostCode" : "29660",
+                "Country" : "ES"
+              }
+            } ]
+          }
+        } ]
+      }, {
+        "ComponentId" : "1",
+        "Code" : "LUG",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_SKBT",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_SNBD",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_GOLF",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_OSSE",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_FIRE",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_BICL",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_CANO",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_HGLD",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      }, {
+        "ComponentId" : "1",
+        "Code" : "EZJ_SportsEquipment_WDSF",
+        "Supplier" : "EZJ",
+        "Quantity" : 0
+      } ]
+    },
+    "ItineraryCost" : {
+      "TotalCost" : 585.63,
+      "CostingStage" : "confirmed",
+      "CostingAccuracy" : 100,
+      "BasedOn" : "1x Double Room - NON-REFUNDABLE - NON-REFUNDABLE - Half Board ",
+      "PartyInfoCheck" : "2 adult(s), 0 infant(s),  and no young people with third party insurance.",
+      "DepositRequiredAtBooking" : 532.88,
+      "CostingValid" : true,
+      "Currency" : "GBP",
+      "Component" : [ {
+        "Supplier" : "HTX",
+        "CostingStage" : "confirmed",
+        "TotalCost" : 105.44,
+        "DepositRequiredAtBooking" : 105.44,
+        "UpdatedTime" : "20160902 1241",
+        "Currency" : "GBP",
+        "HostSystemRequiresPaymentCard" : false,
+        "ComponentType" : "Transfer",
+        "Detail" : [ {
+          "Description" : "ALL PAX TRANSFER: Shuttle Transfer: Malaga Airport (Airport) to Marbella - Puerto Banus (Accommodation) (Return)",
+          "UnitCost" : 105.439995,
+          "Quantity" : 1,
+          "ExtendedCost" : 105.44,
+          "Currency" : "GBP",
+          "PriceType" : "PartyPrice",
+          "FPC" : "basic.pax.transfer",
+          "ComponentType" : "Transfer",
+          "ExtraCode" : "T!HTX!505413:2:3!GBIAe!IATA!AGP!GEO!-4606100316399550962,4630332117153352778!GBLLA",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 83.84,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 83.84,
+            "UnitMarkup" : 21.6
+          }
+        } ],
+        "PricingAudit" : {
+          "Currency" : "GBP",
+          "TotalCost" : 83.84,
+          "TotalPrice" : 105.44,
+          "Profit" : 21.6
+        }
+      }, {
+        "ComponentId" : "1",
+        "Supplier" : "EZJ",
+        "CostingStage" : "confirmed",
+        "TotalCost" : 194.59,
+        "DepositRequiredAtBooking" : 194.59,
+        "UpdatedTime" : "20160902 1241",
+        "Currency" : "GBP",
+        "HostSystemRequiresPaymentCard" : true,
+        "ComponentType" : "Flight",
+        "Detail" : [ {
+          "Description" : "Outbound adult fare",
+          "UnitCost" : 52.620003,
+          "Quantity" : 2,
+          "ExtendedCost" : 105.24,
+          "Currency" : "GBP",
+          "PriceDescription" : "Adult Flight Outbound",
+          "PriceCode" : "Fl1Ad",
+          "PriceType" : "AdultPrice",
+          "FPC" : "basic.adult.flight.1",
+          "ComponentType" : "Flight",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 32.79,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 32.79,
+            "UnitMarkup" : 19.83
+          }
+        }, {
+          "Description" : "Homebound adult tax",
+          "UnitCost" : 0.0,
+          "Quantity" : 2,
+          "ExtendedCost" : 0.0,
+          "Currency" : "GBP",
+          "PriceDescription" : "Flight Tax Homebound",
+          "PriceCode" : "TxFl2",
+          "PriceType" : "AdultPrice",
+          "FPC" : "tax.adult.flight.2",
+          "ComponentType" : "Flight",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 0.0,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 0.0,
+            "UnitMarkup" : 0.0
+          }
+        }, {
+          "Description" : "Outbound adult tax",
+          "UnitCost" : 13.0,
+          "Quantity" : 2,
+          "ExtendedCost" : 26.0,
+          "Currency" : "GBP",
+          "PriceDescription" : "Flight Tax Outbound",
+          "PriceCode" : "TxFl1",
+          "PriceType" : "AdultPrice",
+          "FPC" : "tax.adult.flight.1",
+          "ComponentType" : "Flight",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 13.0,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 13.0,
+            "UnitMarkup" : 0.0
+          }
+        }, {
+          "Description" : "Homebound adult fare",
+          "UnitCost" : 41.39,
+          "Quantity" : 2,
+          "ExtendedCost" : 82.78,
+          "Currency" : "GBP",
+          "PriceDescription" : "Adult Flight Homebound",
+          "PriceCode" : "Fl2Ad",
+          "PriceType" : "AdultPrice",
+          "FPC" : "basic.adult.flight.2",
+          "ComponentType" : "Flight",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 25.79,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 25.79,
+            "UnitMarkup" : 15.6
+          }
+        }, {
+          "Description" : "Easyjet Booking Admin Fee",
+          "UnitCost" : 14.0,
+          "Quantity" : 1,
+          "ExtendedCost" : 14.0,
+          "Currency" : "GBP",
+          "PriceDescription" : "Supplement",
+          "PriceCode" : "Sp",
+          "FPC" : "supplement.party.handling",
+          "ComponentType" : "Flight",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 14.0,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 14.0,
+            "UnitMarkup" : 0.0
+          }
+        }, {
+          "Description" : "Discount",
+          "UnitCost" : -40.0,
+          "Quantity" : 1,
+          "ExtendedCost" : -40.0,
+          "Currency" : "GBP",
+          "PriceDescription" : "adjustment",
+          "FPC" : "supplement.booking.discount",
+          "ComponentType" : "Flight",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 0.0,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 0.0,
+            "UnitMarkup" : -40.0
+          }
+        }, {
+          "Description" : "Atol Protection Cover",
+          "UnitCost" : 5.0,
+          "Quantity" : 1,
+          "ExtendedCost" : 5.0,
+          "Currency" : "GBP",
+          "PriceDescription" : "adjustment",
+          "FPC" : "atol.party.commission",
+          "ComponentType" : "Flight",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 0.0,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 0.0,
+            "UnitMarkup" : 5.0
+          }
+        }, {
+          "Description" : "Payment Card Charge",
+          "UnitCost" : 1.57,
+          "Quantity" : 1,
+          "ExtendedCost" : 1.57,
+          "Currency" : "GBP",
+          "PriceDescription" : "Supplement",
+          "PriceCode" : "Sp",
+          "FPC" : "supplement.party.handling",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 1.57,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 1.57,
+            "UnitMarkup" : 0.0
+          }
+        } ],
+        "PaymentCardCharge" : [ {
+          "CardType" : "American_Express",
+          "Amount" : 1.57,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Maestro",
+          "Amount" : 0.0,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Mastercard",
+          "Amount" : 1.57,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Solo",
+          "Amount" : 0.0,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Switch",
+          "Amount" : 0.0,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Visa_Credit",
+          "Amount" : 1.57,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Visa_Debit",
+          "Amount" : 0.0,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Visa_Delta",
+          "Amount" : 0.0,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        }, {
+          "CardType" : "Visa_Electron",
+          "Amount" : 0.0,
+          "Currency" : "GBP",
+          "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+        } ],
+        "PricingAudit" : {
+          "Currency" : "GBP",
+          "TotalCost" : 158.73,
+          "TotalPrice" : 194.59,
+          "Profit" : 35.86
+        },
+        "AppliedPricingRules" : {
+          "PricingRule" : [ {
+            "Name" : "DP LCC FLIGHTS MARKUP",
+            "Type" : "Markup",
+            "AdjustmentAmount" : 50.0
+          }, {
+            "Name" : "DP S16 MALAGA FLIGHT DISCOUNT",
+            "Type" : "Discount",
+            "AdjustmentAmount" : -40.0
+          }, {
+            "Name" : "LCC FLIGHTS COMMISSION",
+            "Type" : "Commission",
+            "AdjustmentAmount" : 20.86
+          }, {
+            "Name" : "ATOL - NON TCX",
+            "Type" : "Fee",
+            "AdjustmentAmount" : 5.0
+          } ]
+        }
+      }, {
+        "ComponentId" : "2",
+        "Supplier" : "EXP",
+        "CostingStage" : "confirmed",
+        "TotalCost" : 285.6,
+        "DepositRequiredAtBooking" : 285.6,
+        "UpdatedTime" : "20160902 1241",
+        "Currency" : "GBP",
+        "Detail" : [ {
+          "Description" : "Double Room - NON-REFUNDABLE - NON-REFUNDABLE - Half Board",
+          "UnitCost" : 290.78998,
+          "Quantity" : 1,
+          "ExtendedCost" : 290.79,
+          "Currency" : "GBP",
+          "PriceDescription" : "Basic Package",
+          "PriceCode" : "Pk",
+          "FPC" : "basic.pax.package",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 238.04,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 238.04,
+            "UnitMarkup" : 52.75
+          }
+        }, {
+          "Description" : "Discount",
+          "UnitCost" : -5.19,
+          "Quantity" : 1,
+          "ExtendedCost" : -5.19,
+          "Currency" : "GBP",
+          "PriceDescription" : "adjustment",
+          "FPC" : "supplement.booking.discount",
+          "ComponentType" : "Accommodation",
+          "SourceCostDetail" : {
+            "SourceUnitCost" : 0.0,
+            "SourceCurrency" : "GBP",
+            "UnitCost" : 0.0,
+            "UnitMarkup" : -5.19
+          }
+        } ],
+        "PricingAudit" : {
+          "Currency" : "GBP",
+          "TotalCost" : 238.04,
+          "TotalPrice" : 285.6,
+          "Profit" : 47.56
+        },
+        "AppliedPricingRules" : {
+          "PricingRule" : [ {
+            "Name" : "DP XML ACCOM MARKUP",
+            "Type" : "Markup",
+            "AdjustmentAmount" : 21.33
+          }, {
+            "Name" : "MALAGA ACCOMMODATION DISCOUNT",
+            "Type" : "Discount",
+            "AdjustmentAmount" : -5.19
+          }, {
+            "Name" : "EXPEDIA COMMISSION",
+            "Type" : "Commission",
+            "AdjustmentAmount" : 31.42
+          } ]
+        }
+      } ],
+      "PaymentCardCharge" : [ {
+        "CardType" : "American_Express",
+        "Amount" : 1.57,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Maestro",
+        "Amount" : 0.0,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Mastercard",
+        "Amount" : 1.57,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Solo",
+        "Amount" : 0.0,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Switch",
+        "Amount" : 0.0,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Visa_Credit",
+        "Amount" : 1.57,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Visa_Debit",
+        "Amount" : 0.0,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Visa_Delta",
+        "Amount" : 0.0,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      }, {
+        "CardType" : "Visa_Electron",
+        "Amount" : 0.0,
+        "Currency" : "GBP",
+        "AcceptableAuthMode" : [ "cv2_only", "cv2_and_address", "cv2_and_postcode", "all" ]
+      } ],
+      "PricingRulesTotals" : {
+        "PricingRule" : [ {
+          "Name" : "Total Discount",
+          "Type" : "Discount",
+          "AdjustmentAmount" : -45.19
+        }, {
+          "Name" : "Total Fee",
+          "Type" : "Fee",
+          "AdjustmentAmount" : 5.0
+        }, {
+          "Name" : "Total Commission",
+          "Type" : "Commission",
+          "AdjustmentAmount" : 52.28
+        }, {
+          "Name" : "Total Markup",
+          "Type" : "Markup",
+          "AdjustmentAmount" : 71.33
+        } ]
+      }
+    },
+    "ItineraryOptions" : [ {
+      "ComponentId" : "1",
+      "OptionalExtra" : [ {
+        "Description" : "Luggage Allowance - 20kgs",
+        "Code" : "LUG",
+        "Supplier" : "EZJ",
+        "FPC" : "supplement.pax.baggage",
+        "Type" : "Baggage",
+        "QuantityAvailable" : 6,
+        "UnitCost" : 37.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 37.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 37.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Skis and/or Boots",
+        "Code" : "EZJ_SportsEquipment_SKBT",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 60.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 60.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 60.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Snowboard",
+        "Code" : "EZJ_SportsEquipment_SNBD",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 60.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 60.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 60.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Golf Equipment",
+        "Code" : "EZJ_SportsEquipment_GOLF",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 60.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 60.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 60.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Other Small Sporting Equipment",
+        "Code" : "EZJ_SportsEquipment_OSSE",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 60.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 60.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 60.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Sporting Firearms",
+        "Code" : "EZJ_SportsEquipment_FIRE",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 60.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 60.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 60.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Bicycle",
+        "Code" : "EZJ_SportsEquipment_BICL",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 70.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 70.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 70.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Canoe/Kayak",
+        "Code" : "EZJ_SportsEquipment_CANO",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 70.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 70.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 70.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Hang Glider",
+        "Code" : "EZJ_SportsEquipment_HGLD",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 70.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 70.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 70.0,
+          "UnitMarkup" : 0.0
+        }
+      }, {
+        "Description" : "Sports Equipment Charge - Windsurfer",
+        "Code" : "EZJ_SportsEquipment_WDSF",
+        "Supplier" : "EZJ",
+        "FPC" : "extra.pax.any",
+        "Type" : "Other",
+        "QuantityAvailable" : 2,
+        "UnitCost" : 70.0,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "SelectedPax",
+        "SourceCost" : {
+          "SourceUnitCost" : 70.0,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 70.0,
+          "UnitMarkup" : 0.0
+        }
+      } ]
+    }, {
+      "ComponentId" : "2"
+    }, {
+      "OptionalExtra" : [ {
+        "ID" : "505413:2:3",
+        "Description" : "ALL PAX TRANSFER: Shuttle Transfer: Malaga Airport (Airport) to Marbella - Puerto Banus (Accommodation) (Return)",
+        "Code" : "T!HTX!505413:2:3!GBIAe!IATA!AGP!GEO!-4606100316399550962,4630332117153352778!GBLLA",
+        "Supplier" : "HTX",
+        "FPC" : "extra.pax.transfer",
+        "Type" : "Transfer",
+        "QuantityAvailable" : 1,
+        "UnitCost" : 105.44,
+        "CurrencyCode" : "GBP",
+        "ApplyTo" : "AllPax",
+        "SubType" : "PUBLIC_SHUTTLE_TRANSFER",
+        "MoreInfoText" : {
+          "ReturnTime" : [ "Shuttles are a shared transfer option and are a cheap, fast and\n                    effective way of travelling to and from your accommodation in a place you may be\n                    unfamiliar with. They're cheaper as they run to a schedule, and won't go to\n                    private addresses/villas. Shuttles will either deliver to the door of the hotel\n                    or where this isn?t possible the nearest appropriate stopping place for your\n                    property. Transfer times are estimated and can vary dependent upon traffic\n                    and/or the number of stops made. These are available in many locations\n                    worldwide, and may range in size from a minibus to a large coach.. Outbound\n                    arrival date: 18/Nov/2016 10:40. Return departure date: 21/Nov/2016 21:10.\n                    Flight details are required at booking!\n                " ]
+        },
+        "OptionalExtraInformation" : [ {
+        } ],
+        "SourceCost" : {
+          "SourceUnitCost" : 105.44,
+          "SourceCurrency" : "GBP",
+          "UnitCost" : 0.0,
+          "UnitMarkup" : 0.0
+        }
+      } ]
+    } ],
+    "Component" : [ {
+      "Supplier" : "EZJ",
+      "ComponentId" : "1",
+      "BookingChannel" : "XML",
+      "BookingChannelName" : "EasyJet"
+    }, {
+      "Supplier" : "EXP",
+      "ComponentId" : "2",
+      "BookingChannel" : "XML",
+      "BookingChannelName" : "Expedia Hotels from MedHotels"
+    }, {
+      "Supplier" : "HTX",
+      "BookingChannel" : "XML",
+      "BookingChannelName" : "Holiday Taxis"
+    } ],
+    "FOIDAllowed" : [ {
+      "ComponentId" : "1",
+      "FOID" : [ "PP" ]
+    } ]
+  },
+  "PartyInfo" : {
+    "NumberOfAdults" : 2,
+    "NumberOfInfants" : 0,
+    "ThirdPartyInsurance" : true,
+    "ThirdPartyInsurerName" : "TBC"
+  },
+  "PassengerDetails" : {
+    "LeadCustomer" : {
+      "Surname" : "Brown",
+      "Firstname" : "Lynn",
+      "DOB" : "19721211",
+      "Title" : "Mrs",
+      "MiddleInitials" : "Joyce",
+      "CountsAs" : "Adult",
+      "ContactDetails" : {
+        "EmailAddress" : "foo@bar.com",
+        "Telephone" : "02036210496",
+        "Address" : {
+          "Address1" : "5 dawnay gardens",
+          "Address3" : "london",
+          "CityOrTown" : "london",
+          "PostCode" : "sw183pw",
+          "Country" : "GB"
+        }
+      }
+    },
+    "Customer" : [ {
+      "Surname" : "Walker",
+      "Firstname" : "Bloggs",
+      "DOB" : "19730419",
+      "Title" : "Mr",
+      "MiddleInitials" : "Charles",
+      "CountsAs" : "Adult",
+      "ContactDetails" : {
+        "EmailAddress" : "foo@bar.com",
+        "Telephone" : "02036210496",
+        "Address" : {
+          "Address1" : "5 dawnay gardens",
+          "Address3" : "london",
+          "CityOrTown" : "london",
+          "PostCode" : "sw183pw",
+          "Country" : "GB"
+        }
+      }
+    } ]
+  },
+  "Component" : [ {
+    "ComponentId" : "1",
+    "Supplier" : "EZJ",
+    "CurrentBookingStage" : "confirmed_costing"
+  }, {
+    "ComponentId" : "2",
+    "Supplier" : "EXP",
+    "CurrentBookingStage" : "confirmed_costing"
+  }, {
+    "Supplier" : "HTX",
+    "CurrentBookingStage" : "confirmed_costing"
+  } ],
+  "BookingInfo" : {
+    "Success" : "true",
+    "PaymentMode" : "syndicator_deferred",
+    "PaidOnlyDeposit" : false,
+    "PaymentTakenAtBooking" : 585.63,
+    "Currency" : "GBP",
+    "ThirdPartyHandoffBookingId" : "13009865",
+    "BookingComponent" : [ {
+      "ComponentId" : "2",
+      "Supplier" : "EXP",
+      "Success" : "true",
+      "BookingReference" : "35465632",
+      "Deposit" : 238.04,
+      "TotalCost" : 238.04,
+      "BookingChannel" : "XML",
+      "BookingChannelName" : "Expedia Hotels from MedHotels",
+      "BookingUsername" : "undefined",
+      "Currency" : "GBP",
+      "BookingDate" : "20160902 1241"
+    }, {
+      "ComponentId" : "1",
+      "Supplier" : "EZJ",
+      "Success" : "true",
+      "BookingReference" : "2456633",
+      "Deposit" : 158.73,
+      "TotalCost" : 158.73,
+      "BookingChannel" : "XML",
+      "BookingChannelName" : "EasyJet",
+      "BookingUsername" : "culturaNov06@multicom.co.uk",
+      "Currency" : "GBP",
+      "BookingDate" : "20160902 1241"
+    }, {
+      "Supplier" : "HTX",
+      "Success" : "true",
+      "BookingReference" : "1234556",
+      "Deposit" : 83.84,
+      "TotalCost" : 83.84,
+      "BookingChannel" : "XML",
+      "BookingChannelName" : "Holiday Taxis",
+      "BookingUsername" : "undefined",
+      "Currency" : "GBP",
+      "BookingDate" : "20160902 1241"
+    } ],
+    "LodgedCardPaymentAuth" : [ {
+      "AuthSystemUsed" : "EasyJet API",
+      "Amount" : 158.73,
+      "Currency" : "GBP",
+      "Last4DigitsOfCardNumberUsed" : "1111",
+      "CardNameUsed" : "A2B TCOOK WHOLESALE",
+      "SupplierCode" : "EZJ",
+      "ComponentId" : "1",
+      "First6DigitsOfCardNumberUsed" : "111111"
+    } ]
+  },
+  "Handoff" : [ {
+    "Handoff" : "UNKNOWN"
+  } ]
+}

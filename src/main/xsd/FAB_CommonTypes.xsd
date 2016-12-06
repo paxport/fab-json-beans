@@ -3416,6 +3416,7 @@
 		</xs:attribute>
 		<xs:attribute name="ConsumersReference" type="xs:string" use="optional"/>
 	</xs:complexType>
+	<xs:element name="Basket" type="Basket"/>
 	<xs:complexType name="Basket">
 		<xs:annotation>
 			<xs:documentation>The FAB Basket can contain only one itinerary. It is created by sending a CreateBasketRequest, this starts the booking procedure. It can be amended (to add cars and optional extras, as well as give customer details) by sending an AmendBasketRequest. If an item has been added to the itinerary, it can invalidate the current costing, in which case the costing will remain invalid until reaching the next costing stage. A Basket whose Itinerary Costing has been confirmed and is currently valid, can be booked by sending a BasketBookRequest that contains the required payment information, this will result in a BookingInfo object being added to the basket.</xs:documentation>

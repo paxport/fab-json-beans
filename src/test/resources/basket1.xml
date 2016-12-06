@@ -4,7 +4,7 @@
         TargetBookingStage="booked" CurrentBookingStage="booked"
         ConsumersReference="null-Fri Nov 18 00:00:00 GMT 2016-Bvv-ref:sxh">
     <Itinerary ItineraryId="si3993"
-               ItineraryReference="C2C318EDsssssabS5"
+               ItineraryReference="ssss"
                StartDate="20161118" EndDate="20161121" NumNights="3" Availability="available"
                BookableByFab="true" Currency="GBP" PassengerIdRequired="true"
                PassengerIdMandatory="false" NationalityRequired="true" VatRequired="false"
